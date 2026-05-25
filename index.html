@@ -7,7 +7,30 @@
   <title>مهردار</title>
 
   <style>
+    .menu-container {
+    width: 70%;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
 
+.menu-item {
+    text-decoration: none;
+    color: #d4a64f;
+    border: 1px solid #8a6428;
+    padding: 24px;
+    text-align: center;
+    font-size: 38px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background: rgba(212,166,79,0.08);
+    color: #f0c56a;
+}
     body{
       margin:0;
       height:100vh;
@@ -53,10 +76,21 @@ font-family:Tahoma, sans-serif;
 
 <body>
 
-  <div class="thoughts">
-   <a href="kherad.html">خرد</a>
-    <a href="thoughts.html">گشایش اندیشه‌ها</a>
-  </div>
+  <div class="menu-container">
+
+  <a href="kherad.html" class="menu-item">خرد</a>
+
+  <a href="andisheh-nik.html" class="menu-item">اندیشه نیک</a>
+
+  <a href="rasti.html" class="menu-item">راستی</a>
+
+  <a href="neveshteha.html" class="menu-item">نوشته‌ها</a>
+
+  <a href="videos.html" class="menu-item">ویدیوها</a>
+
+  <a href="about.html" class="menu-item">دربارهٔ راه مهردار</a>
+
+</div>
 
 </body>
 
