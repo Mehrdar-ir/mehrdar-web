@@ -1,73 +1,94 @@
+```html
 <!DOCTYPE html>
 <html lang="fa">
+
 <head>
   <meta charset="UTF-8">
   <title>مهردار</title>
 
   <style>
+
     body{
       margin:0;
       height:100vh;
+      overflow:hidden;
+
       background-image:url("bg.png");
       background-size:cover;
       background-position:center;
       background-repeat:no-repeat;
+
       font-family:sans-serif;
+      position:relative;
     }
 
-    .container{
-      height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
+    /* مهردار */
+    .title{
+      position:absolute;
+
+      top:34%;
+      left:58%;
+
+      transform:translate(-50%,-50%);
+
       text-align:center;
+
+      color:#d4af37;
+
+      text-shadow:0 0 12px rgba(0,0,0,0.7);
     }
 
-    .top{
-      margin-top:40px;
+    .title h1{
+      margin:0;
+      font-size:72px;
     }
 
-    .center{
-      flex:1;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .title p{
+      margin-top:12px;
+      font-size:28px;
+      color:#f5deb3;
     }
 
-    .bottom{
-      margin-bottom:40px;
+    /* گشایش اندیشه‌ها */
+    .thoughts{
+      position:absolute;
+
+      top:52%;
+      left:58%;
+
+      transform:translate(-50%,-50%);
+
+      font-size:30px;
+
+      color:#f5e6a8;
+
+      text-shadow:0 0 10px rgba(0,0,0,0.7);
     }
 
-    a{
+    .thoughts a{
       text-decoration:none;
-      font-size:18px;
       color:inherit;
     }
+
   </style>
 
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- عنوان اصلی -->
+  <div class="title">
+    <h1>مهردار</h1>
+    <p>راهی بر پایه خرد و راستی</p>
+  </div>
 
-    <!-- بالا -->
-    <div class="top">
-      <h1>مهردار</h1>
-      <p>راهی بر پایه خرد و راستی</p>
-    </div>
-
-    <!-- وسط -->
-    <div class="center">
-      <div>✦</div>
-    </div>
-
-    <!-- پایین -->
-    <div class="bottom">
-      <a href="#">گشایش اندیشه‌ها</a>
-    </div>
-
+  <!-- گشایش اندیشه‌ها -->
+  <div class="thoughts">
+    <a href="#">گشایش اندیشه‌ها</a>
   </div>
 
 </body>
+
 </html>
+```
+
