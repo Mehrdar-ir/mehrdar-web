@@ -112,7 +112,7 @@ body {
 
     .mehrdar-title {
         width: auto;
-        margin: 16px 20px 10px;
+        margin: 55px 20px 10px;
       order: 2;
     }
 
@@ -130,7 +130,41 @@ body {
         font-size: 22px;
     }
 }
+@media (max-width: 932px) and (orientation: landscape) {
+  body {
+    display: block;
+}
+.menu-container {
+    width: auto;
+    margin: 0 40px;
+    display: flex;
+    flex-direction: row;
+    direction: rtl;
+    gap: 12px;
+}
 
+.menu-item {
+    flex: 1;
+    font-size: 18px;
+    padding: 10px 8px;
+}
+  .mehrdar-title {
+    width: 46%;
+    margin: 18px 40px 20px auto;
+    order: initial;
+    text-align: center;
+}
+
+.mehrdar-title h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.mehrdar-title p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+}
   </style>
 
 </head>
