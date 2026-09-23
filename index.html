@@ -94,11 +94,15 @@ font-family:Tahoma, sans-serif;
     }
 
  @media (max-width: 768px) {
-
+body {
+    display: flex;
+    flex-direction: column;
+}
     .menu-container {
     width: auto;
     margin: 14px 20px 0;
     gap: 7px;
+    order: 1;
 }
 
     .menu-item {
@@ -109,6 +113,7 @@ font-family:Tahoma, sans-serif;
     .mehrdar-title {
         width: auto;
         margin: 16px 20px 10px;
+      order: 2;
     }
 
     .mehrdar-title h1 {
