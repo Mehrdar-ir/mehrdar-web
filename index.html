@@ -91,6 +91,9 @@ font-family:Tahoma, sans-serif;
     .thoughts a{
       text-decoration:none;
       color:inherit;
+      .mobile-emblem {
+    display: none;
+}
     }
 
  @media (max-width: 768px) {
@@ -126,7 +129,20 @@ body {
       line-height: 1.8;
     text-shadow: 0 2px 6px rgba(0,0,0,0.95);
     }
+.mobile-emblem {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
 
+.mobile-emblem img {
+    width: 64px;
+    height: auto;
+    display: block;
+}
     .thoughts {
         font-size: 22px;
     }
@@ -185,6 +201,9 @@ body {
 
 <a href="about.html" class="menu-item">دربارهٔ مهردار</a>
 
+</div>
+  <div class="mobile-emblem">
+    <img src="mehrdar-1.png" alt="نشان مهردار">
 </div>
 
 </body>
