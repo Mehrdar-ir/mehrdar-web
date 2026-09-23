@@ -130,12 +130,17 @@ body {
     text-shadow: 0 2px 6px rgba(0,0,0,0.95);
     }
 .mobile-emblem {
-    display: block;
+    display: flex;
     position: absolute;
     left: 50%;
-    bottom: 105px;
+    bottom: 155px;
     transform: translateX(-50%);
     z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #f2c96b;
+}
 }
 
 .mobile-emblem img {
@@ -144,7 +149,7 @@ body {
     display: block;
   .emblem-name {
     margin-top: 5px;
-    color: #f2c96b;
+    color: #ffe08a !important;
     font-size: 15px;
     letter-spacing: 2px;
     text-align: center;
@@ -152,7 +157,7 @@ body {
 
 .emblem-motto {
     margin-top: 4px;
-    color: #f2c96b;
+    color: #ffe08a !important;
     font-size: 13px;
     white-space: nowrap;
     text-align: center;
