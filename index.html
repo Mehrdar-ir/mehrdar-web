@@ -7,27 +7,23 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مهردار</title>
 
-  <style>
-.menu-container {
-    width: 34%;
-    margin: 35px 120px 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+<style>
+/* =========================
+   پایه و دسکتاپ
+   ========================= */
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Tahoma, sans-serif;
+    position: relative;
 }
 
-.menu-item {
-    text-decoration: none;
-    color: #f2c96b;
-    border: 1px solid rgba(242, 201, 107, 0.75);
-    padding: 11px 18px;
-    text-align: center;
-    font-size: 22px;
-    border-radius: 7px;
-    background: rgba(0,0,0,0.32);
-    text-shadow: 0 0 8px rgba(0,0,0,0.9);
-    transition: 0.3s;
-}
 .mehrdar-title {
     width: 34%;
     margin: 35px 120px 18px auto;
@@ -50,64 +46,76 @@
     text-shadow: 0 0 8px rgba(0,0,0,0.9);
 }
 
+.menu-container {
+    width: 34%;
+    margin: 35px 120px 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    text-decoration: none;
+    color: #f2c96b;
+    border: 1px solid rgba(242, 201, 107, 0.75);
+    padding: 11px 18px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.32);
+    text-shadow: 0 0 8px rgba(0,0,0,0.9);
+    transition: 0.3s;
+}
+
 .menu-item:hover {
     background: rgba(242,201,107,0.10);
     color: #ffe08a;
 }
-    body{
-      margin:0;
-      height:100vh;
-      overflow:hidden;
 
-      background-image:url("bg.png");
-      background-size:cover;
-      background-position:center;
-      background-repeat:no-repeat;
+.thoughts {
+    position: absolute;
+    top: 52%;
+    left: 58%;
+    transform: translate(-50%,-50%);
+    font-size: 34px;
+    color: #f5e6a8;
+    text-shadow: 0 0 12px rgba(0,0,0,0.75);
+    letter-spacing: 1px;
+}
 
-    
-font-family:Tahoma, sans-serif;
+.thoughts a {
+    text-decoration: none;
+    color: inherit;
+}
 
-      position:relative;
-    }
-
-    /* گشایش اندیشه‌ها */
-    .thoughts{
-      position:absolute;
-
-      top:52%;
-      left:58%;
-
-      transform:translate(-50%,-50%);
-
-      font-size:34px;
-
-      color:#f5e6a8;
-
-      text-shadow:0 0 12px rgba(0,0,0,0.75);
-
-      letter-spacing:1px;
-    }
-
-    .thoughts a{
-      text-decoration:none;
-      color:inherit;
-      .mobile-emblem {
+.mobile-emblem {
     display: none;
 }
+
+
+/* =========================
+   موبایل عمودی
+   ========================= */
+
+@media (max-width: 768px) and (orientation: portrait) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        background-image: url("bg-mobile.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
- @media (max-width: 768px) {
-body {
-    display: flex;
-    flex-direction: column;
-  background-image: url("bg-mobile.png");
-}
     .menu-container {
-    width: auto;
-    margin: 75px 20px 0;
-    gap: 7px;
-    order: 1;
-}
+        width: auto;
+        margin: 75px 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        order: 1;
+    }
 
     .menu-item {
         font-size: 18px;
@@ -117,7 +125,8 @@ body {
     .mehrdar-title {
         width: auto;
         margin: 55px 20px 10px;
-      order: 2;
+        order: 2;
+        text-align: center;
     }
 
     .mehrdar-title h1 {
@@ -125,91 +134,104 @@ body {
     }
 
     .mehrdar-title p {
-        font-size: 16px;       
-      line-height: 1.8;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.95);
+        font-size: 16px;
+        line-height: 1.8;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.95);
     }
-.mobile-emblem {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    bottom: 70px;
-    transform: translateX(-50%);
-    z-index: 2;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: #f2c96b;
-}
-}
 
-.mobile-emblem img {
-    width: 58px;
-    height: auto;
-    display: block;
-}
+    .mobile-emblem {
+        display: flex;
+        position: absolute;
+        left: 50%;
+        bottom: 70px;
+        transform: translateX(-50%);
+        z-index: 2;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #f2c96b;
+    }
 
-.emblem-name {
-    margin-top: 5px;
-    color: #ffe08a !important;
-    font-size: 15px;
-    letter-spacing: 2px;
-    text-align: center;
-}
+    .mobile-emblem img {
+        width: 58px;
+        height: auto;
+        display: block;
+    }
 
-.emblem-motto {
-    margin-top: 4px;
-    color: #ffe08a !important;
-    font-size: 13px;
-    white-space: nowrap;
-    text-align: center;
-    direction: rtl;
-}
+    .emblem-name {
+        margin-top: 5px;
+        color: #ffe08a;
+        font-size: 15px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
 
-.thoughts {
-    font-size: 22px;
-}
+    .emblem-motto {
+        margin-top: 4px;
+        color: #ffe08a;
+        font-size: 13px;
+        white-space: nowrap;
+        text-align: center;
+        direction: rtl;
+    }
+
     .thoughts {
         font-size: 22px;
     }
 }
+
+
+/* =========================
+   موبایل افقی
+   ========================= */
+
 @media (max-width: 932px) and (orientation: landscape) {
-    display: block;
-    background-size: contain;
-background-position: center center;
-}
-.menu-container {
-    width: 52%;
-    margin: 0 40px 0 auto;
-    display: flex;
-    flex-direction: row;
-    direction: rtl;
-    gap: 12px;
-}
 
-.menu-item {
-    flex: 1;
-    font-size: 15px;
-    padding: 7px 5px;
-}
-  .mehrdar-title {
-    width: 34%;
-    margin: 18px 40px 20px auto;
-    order: initial;
-    text-align: center;
-}
+    body {
+        display: block;
+        background-image: url("bg.png");
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 
-.mehrdar-title h1 {
-    font-size: 38px;
-    margin-bottom: 8px;
-}
+    .mehrdar-title {
+        width: 34%;
+        margin: 18px 40px 20px auto;
+        text-align: center;
+        direction: rtl;
+    }
 
-.mehrdar-title p {
-    font-size: 16px;
-    line-height: 1.7;
+    .mehrdar-title h1 {
+        font-size: 38px;
+        margin-bottom: 8px;
+    }
+
+    .mehrdar-title p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .menu-container {
+        width: 52%;
+        margin: 0 40px 0 auto;
+        display: flex;
+        flex-direction: row;
+        direction: rtl;
+        gap: 12px;
+    }
+
+    .menu-item {
+        flex: 1;
+        font-size: 15px;
+        padding: 7px 5px;
+    }
+
+    .mobile-emblem {
+        display: none;
+    }
 }
-}
-  </style>
+</style>
 
 </head>
 
