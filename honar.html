@@ -118,27 +118,80 @@
     </section>
 
     
-        <h2 class="gallery-title">نگارخانهٔ آثار چوبی</h2>
 
-    <section style="text-align: center; margin: 35px auto 60px;">
+<h2 class="gallery-title">نگارخانهٔ آثار چوبی</h2>
 
-      <a href="art/خط میخی.png" target="_blank">
-        <img
-          src="art/خط میخی.png"
-          alt="دبیرهٔ میخی؛ کنده‌کاری روی چوب"
-          style="width: 100%; max-width: 650px; height: auto; border-radius: 8px;"
-        >
-      </a>
+<div id="wood-gallery"></div>
 
-      <h3 style="color: #d4af37; font-size: 23px; font-weight: normal; margin: 18px 0 0;">
-        دبیرهٔ میخی
-      </h3>
+<script>
+  // فهرست آثار چوبی
+  // برای تغییر جای هر اثر، تنها شماره order را تغییر بده.
 
-      <p style="font-size: 16px; margin: 0;">
-        شیوه: آزاد، برگرفته از ایران
-      </p>
+  const artworks = [
+    {
+      order: 1,
+      title: "کوروش بزرگ",
+      method: "",
+      image: "",
+      ready: false
+    },
+    {
+      order: 2,
+      title: "دبیرهٔ میخی",
+      method: "آزاد، برگرفته از ایران",
+      image: "art/خط میخی.png",
+      ready: true
+    }
+  ];
 
-    </section>
+  const gallery = document.getElementById("wood-gallery");
+
+  artworks
+    .filter(art => art.ready && art.image)
+    .sort((a, b) => a.order - b.order)
+    .forEach(art => {
+      const section = document.createElement("section");
+
+      section.style.textAlign = "center";
+      section.style.margin = "35px auto 60px";
+
+      const link = document.createElement("a");
+      link.href = art.image;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+
+      const img = document.createElement("img");
+      img.src = art.image;
+      img.alt = art.title;
+      img.loading = "lazy";
+      img.style.width = "100%";
+      img.style.maxWidth = "650px";
+      img.style.height = "auto";
+      img.style.borderRadius = "8px";
+
+      link.appendChild(img);
+
+      const title = document.createElement("h3");
+      title.textContent = art.title;
+      title.style.color = "#d4af37";
+      title.style.fontSize = "23px";
+      title.style.fontWeight = "normal";
+      title.style.margin = "18px 0 0";
+
+      const method = document.createElement("p");
+      method.textContent = art.method
+        ? "شیوه: " + art.method
+        : "";
+      method.style.fontSize = "16px";
+      method.style.margin = "0";
+
+      section.appendChild(link);
+      section.appendChild(title);
+      section.appendChild(method);
+
+      gallery.appendChild(section);
+    });
+</script>
 
 
   </main>
