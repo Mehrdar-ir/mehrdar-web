@@ -162,10 +162,12 @@
       section.style.textAlign = "center";
       section.style.margin = "35px auto 60px";
 
-      const link = document.createElement("a");
-      link.href = art.image;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
+const link = document.createElement("a");
+link.href = art.image;
+link.addEventListener("click", function(event) {
+  event.preventDefault();
+  openArtwork(art.image, art.title);
+});
 
       const img = document.createElement("img");
       img.src = art.image;
@@ -198,7 +200,57 @@
 
       gallery.appendChild(section);
     });
+        gallery.appendChild(section);
+    });
+
+  function openArtwork(image, title) {
+    const overlay = document.createElement("div");
+
+    overlay.style.position = "fixed";
+    overlay.style.inset = "0";
+    overlay.style.background = "rgba(0, 0, 0, 0.95)";
+    overlay.style.display = "flex";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.zIndex = "9999";
+    overlay.style.padding = "20px";
+    overlay.style.boxSizing = "border-box";
+
+    const img = document.createElement("img");
+    img.src = image;
+    img.alt = title;
+    img.style.width = "100%";
+    img.style.maxWidth = "700px";
+    img.style.maxHeight = "85vh";
+    img.style.objectFit = "contain";
+    img.style.borderRadius = "8px";
+
+    const close = document.createElement("button");
+    close.textContent = "×";
+    close.setAttribute("aria-label", "بستن تصویر");
+    close.style.position = "absolute";
+    close.style.top = "15px";
+    close.style.right = "20px";
+    close.style.fontSize = "36px";
+    close.style.color = "#d4af37";
+    close.style.background = "none";
+    close.style.border = "none";
+    close.style.cursor = "pointer";
+
+    overlay.appendChild(img);
+    overlay.appendChild(close);
+    document.body.appendChild(overlay);
+
+    close.onclick = () => overlay.remove();
+
+    overlay.onclick = (event) => {
+      if (event.target === overlay) {
+        overlay.remove();
+      }
+    };
+  }
 </script>
+
 
 
   </main>
