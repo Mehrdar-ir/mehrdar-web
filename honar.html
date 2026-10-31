@@ -318,6 +318,28 @@ if (art.title === "حافظ") {
   section.appendChild(method);
   section.appendChild(poem);
 
+} else if (art.title === "شهریاران") {
+  method.textContent = art.method
+    ? "شیوه: " + art.method
+    : "";
+
+  const poem = document.createElement("p");
+  poem.textContent =
+    "شهر یاران بود و خاک مهربانان این دیار\n" +
+    "مهربانی کی سر آمد شهریاران را چه شد\n" +
+    "حافظ";
+
+  poem.style.whiteSpace = "pre-line";
+  poem.style.fontSize = "17px";
+  poem.style.lineHeight = "2.2";
+  poem.style.color = "#f5e6a8";
+  poem.style.margin = "15px 0";
+
+  section.appendChild(link);
+  section.appendChild(title);
+  section.appendChild(method);
+  section.appendChild(poem);
+
 } else {
   method.textContent = art.method
     ? "شیوه: " + art.method
