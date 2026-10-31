@@ -209,7 +209,9 @@ link.addEventListener("click", function(event) {
       img.alt = art.title;
       img.loading = "lazy";
       img.style.width = "100%";
-      img.style.maxWidth = art.title === "حافظ" ? "400px" : "650px";
+     img.style.maxWidth = art.title === "حافظ"
+  ? (window.innerWidth <= 600 ? "85%" : "400px")
+  : "650px";
       img.style.height = "auto";
       img.style.borderRadius = "8px";
 
