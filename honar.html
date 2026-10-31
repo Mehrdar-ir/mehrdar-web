@@ -173,8 +173,15 @@
     {
       order: 7,
       title: "فرَوَهر",
-      method: "آزاد؛ اندیشهٔ نیک، گفتار نیک، کردار نیک",
+      method: "آزاد؛ اندیشهٔ نیک . گفتار نیک . کردار نیک",
       image: "art/Fravahar.png",
+      ready: true
+    },
+    {
+      order: 8,
+      title: "حافظ",
+      method: "آزاد — بیا ساقی! از کنج دیر مغان، مشو دور که آنجاست گنج روان",
+      image: "art/Hafez.png",
       ready: true
     }
   ];
@@ -215,16 +222,39 @@ link.addEventListener("click", function(event) {
       title.style.fontWeight = "normal";
       title.style.margin = "18px 0 0";
 
-      const method = document.createElement("p");
-      method.textContent = art.method
-        ? "شیوه: " + art.method
-        : "";
-      method.style.fontSize = "16px";
-      method.style.margin = "0";
+const method = document.createElement("p");
 
-      section.appendChild(link);
-      section.appendChild(title);
-      section.appendChild(method);
+if (art.title === "حافظ") {
+  method.textContent = "شیوه: آزاد";
+
+  const poem = document.createElement("p");
+  poem.textContent =
+    "بیا ساقی! از کنج دیر مغان\n" +
+    "مشو دور که آنجاست گنج روان";
+
+  poem.style.whiteSpace = "pre-line";
+  poem.style.fontSize = "17px";
+  poem.style.lineHeight = "2.2";
+  poem.style.color = "#f5e6a8";
+  poem.style.margin = "15px 0";
+
+  section.appendChild(link);
+  section.appendChild(title);
+  section.appendChild(method);
+  section.appendChild(poem);
+
+} else {
+  method.textContent = art.method
+    ? "شیوه: " + art.method
+    : "";
+
+  section.appendChild(link);
+  section.appendChild(title);
+  section.appendChild(method);
+}
+
+method.style.fontSize = "16px";
+method.style.margin = "0";
 
       gallery.appendChild(section);
     });
