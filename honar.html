@@ -183,8 +183,15 @@
       method: "آزاد — بیا ساقی! از کنج دیر مغان، مشو دور که آنجاست گنج روان",
       image: "art/Hafez.png",
       ready: true
-    }
-  ];
+  },
+  {
+    order: 9,
+    title: "خفتگان",
+    method: "آزاد؛ کنده‌کاری روی پوست گردو از هشت زاویه",
+    image: "art/Khoftegan.png",
+    ready: true
+  }
+];
 
   const gallery = document.getElementById("wood-gallery");
 
@@ -233,6 +240,23 @@ if (art.title === "حافظ") {
   poem.textContent =
     "بیا ساقی! از کنج دیر مغان\n" +
     "مشو دور که آنجاست گنج روان";
+
+  poem.style.whiteSpace = "pre-line";
+  poem.style.fontSize = "17px";
+  poem.style.lineHeight = "2.2";
+  poem.style.color = "#f5e6a8";
+  poem.style.margin = "15px 0";
+
+  section.appendChild(link);
+  section.appendChild(title);
+  section.appendChild(method);
+  section.appendChild(poem);
+
+} else if (art.title === "خفتگان") {
+  method.textContent = "شیوه: آزاد";
+
+  const poem = document.createElement("p");
+  poem.textContent = "خفتگان را خبر از محنت بیداران نیست.\nسعدی";
 
   poem.style.whiteSpace = "pre-line";
   poem.style.fontSize = "17px";
