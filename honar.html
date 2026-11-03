@@ -309,6 +309,13 @@
     method: "برگرفته از هنر و تمدن ایران باستان",
     image: "art/Farzane.png",
     ready: true
+  },
+  {
+    order: 27,
+    title: "خرابات",
+    method: "آزاد، قلم‌زنی روی پوست یک گردو",
+    image: "art/Kharabat.png",
+    ready: true
   }
 ];
   const gallery = document.getElementById("wood-gallery");
@@ -411,6 +418,27 @@ if (art.title === "حافظ") {
   section.appendChild(title);
   section.appendChild(method);
   section.appendChild(poem);
+} else if (art.title === "خرابات") {
+  method.textContent = art.method
+    ? "شیوه: " + art.method
+    : "";
+
+  const poem = document.createElement("p");
+  poem.textContent =
+    "در خرابات مغان ما نیز همداستان شویم\n" +
+    "حافظ";
+
+  poem.style.whiteSpace = "pre-line";
+  poem.style.fontSize = "17px";
+  poem.style.lineHeight = "2.2";
+  poem.style.color = "#d8c892";
+  poem.style.margin = "15px 0";
+
+  section.appendChild(link);
+  section.appendChild(title);
+  section.appendChild(method);
+  section.appendChild(poem);
+
 
 } else {
   method.textContent = art.method
