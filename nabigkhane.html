@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نبیگ‌خانه | مهردار</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0f0f0f;
+  color: #d8c892;
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  line-height: 1.9;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 65px 20px;
+}
+
+h1 {
+  color: #d4af37;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  font-size: 17px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.card {
+  display: block;
+  padding: 45px 20px;
+  background: #191919;
+  border: 1px solid #8c7435;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #d8c892;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #d4af37;
+  background: #252116;
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  color: #d4af37;
+  font-size: 23px;
+  margin: 0 0 15px;
+}
+
+.card p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 65px;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 45px 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="container">
+
+<h1>نبیگ‌خانهٔ مهردار</h1>
+
+<p class="intro">
+جایگاهی برای خواندن و شناخت تاریخ، فرهنگ
+و اندیشه‌های ایرانی
+</p>
+
+<div class="cards">
+
+<a href="nabig-mehrdar.html" class="card">
+  <h2>نبیگ‌های مهردار</h2>
+  <p>آثار و نوشته‌های مهردار</p>
+</a>
+
+<a href="nabig-nevisandegan.html" class="card">
+  <h2>نبیگ‌های دیگر نویسندگان</h2>
+  <p>آثاری دربارهٔ تاریخ، فرهنگ و اندیشهٔ ایرانی</p>
+</a>
+
+</div>
+
+<a href="index.html" class="back">
+بازگشت به صفحهٔ نخست
+</a>
+
+</main>
+</body>
+</html>
